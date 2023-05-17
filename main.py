@@ -22,8 +22,8 @@ def auth() -> Response:
     data: Any = request.get_json()
     if (
         {"username", "password"}.issubset(data)
-        and data["username"] == "admin"
-        and data["password"] == "admin"
+        and data["username"] == "bob"
+        and data["password"] == "bob"
     ):
         access_token: str = secrets.token_urlsafe()
         refresh_token: str = secrets.token_urlsafe()
